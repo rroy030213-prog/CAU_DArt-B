@@ -111,7 +111,7 @@ ERD가 없다면 모든 데이터베이스를 직접 보면서 탐색하기
 ---
 # 2️⃣ 학습 인증란
 
-![1주차 학습 인증](C:/Users/O/다트비 자료/CAU_DArt-B/SQL_BASIC/image1.png)
+![1주차 학습 인증](image1.png)
 
 
 <br>

@@ -79,21 +79,23 @@ SELECT
 ~~~
 
 1. 데이터를 집계하고 그룹화하는 방법 설명
- -> 모아서(그룹화해서) 계산하다(평균, 합, 차, 최대, 최소, 개수 등)
+ 
+    - 모아서(그룹화해서) 계산하다(평균, 합, 차, 최대, 최소, 개수 등)
 
 2. GROUP BY, HAVING, ORDER BY, 집계함수(SUM/COUNT 등)을 활용하는 방법을 설명할 수 있다.
 
 - GROUP BY: 같은 값끼리 모아서 그룹화한다.
-ex) 포켓몬에서 타입별로 평균 공격력 확인하기
+    - ex) 포켓몬에서 타입별로 평균 공격력 확인하기
 
 - ORDER BY: 정렬
-ex) 그룹화한 데이터에서 평균 공격력을 오름차순으로 정렬하기
+    - ex) 그룹화한 데이터에서 평균 공격력을 오름차순으로 정렬하기
     - 쿼리의 맨 마지막에만 작성하면 됨
     - DESC(내림차순), OSC(오름차순)
 
 - HAVING: 집계 후에 조건 설정
-ex) 집계된 데이터에서 포켓몬 수가 10 이상인 것만 추출하기
+    - ex) 집계된 데이터에서 포켓몬 수가 10 이상인 것만 추출하기
 
+```
 코드 문법
 SELECT
     집계할_컬럼1,
@@ -101,13 +103,14 @@ SELECT
 FROM Table
 GROUP BY
     집계할_컬럼1
-
+```
 
 3. having과 where의 차이에 대해서 설명할 수 있다.
 - WHERE: Table에 바로 조건을 설정하고 싶은 경우 사용
     - Raw Data인 테이블 데이터에서 조건 설정
 - HAVING: GROUP BY한 후 조건을 설정하고 싶은 경우 사용
 
+```
 HAVING 문법
 
 SELECT
@@ -117,20 +120,21 @@ FROM <table>
 GROUP BY 컬럼1, 컬럼2
 HAVING                     #GROUP BY가 된 상태에서 조건을 검
     col1_count > 3
+```
 
-
+```
 예제문제 코드
--- SELECT
---   COUNT(id) AS cnt,
---   COUNT(*) AS cnt2
--- FROM basic.pokemon
+SELECT
+   COUNT(id) AS cnt,
+   COUNT(*) AS cnt2
+FROM basic.pokemon
 
--- SELECT
---   generation,
---   COUNT(id) AS cnt
--- FROM basic.pokemon
--- GROUP BY
---   generation
+SELECT
+  generation,
+  COUNT(id) AS cnt
+FROM basic.pokemon
+GROUP BY
+  generation
 
 SELECT
   type1,
@@ -140,7 +144,7 @@ GROUP BY
   type1
 HAVING cnt >= 10
 ORDER BY cnt DESC
-
+```
 
 
 
